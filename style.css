@@ -1,0 +1,300 @@
+  body {
+      background-color: #1A1D25;
+      text-align: center;
+      height: 100%;
+  }
+
+  .small {
+      font-size: 10px;
+      font: 'Owsald';
+  }
+
+  #opening {
+      margin-top: 200px;
+      height: 100vh;
+      
+  }
+
+  #title {
+    line-height: 10px;
+    height: 55px;
+  }
+  h1 {
+    font-family: "Waltograph";
+      font-size: 80px;
+      color: #f3f3f3;
+      text-shadow: 0 0 2px #0088D1, 0 0 3px #00C07A;
+  }
+
+  h3 {
+        font-family: "Mouse Memoirs";
+        font-size: 25px;
+        color: #cfcfcf;
+        /*text-shadow: 0 0 2px #0088D1, 0 0 3px #00C07A;*/
+  }
+  p {
+      color: black;
+  }
+
+h2 {
+    color: #C1C1C1;
+    font-size: 20px;
+    font-family: 'Oswald';
+}
+
+h4 {
+    color: #C1C1C1;
+    font-size: 15px;
+    font-family: 'Oswald';
+}
+p {
+    color: #C1C1C1;
+    font-size: 15px;
+    font-family: 'Oswald';
+}
+
+circle { transition: margin-left .5s }
+
+circle:hover {
+ margin-left: -7px;
+}
+
+@keyframes hideshow {
+    0% { opacity: 2; }
+    20% { opacity: .8; }
+    40% { opacity: .6; }
+    60% { opacity: .4; }
+    80% { opacity: .4; }
+    100% { opacity: 2; }
+} 
+
+.circle1 {
+    animation: hideshow 3s ease infinite;
+}
+
+.circle2 {
+    animation: hideshow 3s 1.5s ease infinite;
+}
+
+.circle3 {
+    animation: hideshow 3s 3s ease infinite;
+}
+
+.circle4 {
+    animation: hideshow 3s 4.5s ease infinite;
+}
+
+@keyframes hideshow2 {
+    0% { opacity: 0.1; }
+    60% { opacity: .1; }
+    97% { opacity: .1;}
+    100% { opacity: 1; }
+} 
+
+#star1 {
+    animation: hideshow2 10s 1s ease infinite;
+}
+
+#star2 {
+    animation: hideshow2 10s 5s ease infinite;
+}
+
+#star3 {
+    animation: hideshow2 10s 1s ease infinite;
+}
+
+#star4 {
+    animation: hideshow2 10s 4s ease infinite;
+}
+#star5 {
+    animation: hideshow2 10s 6s ease infinite;
+}
+
+#star6 {
+    animation: hideshow2 10s 7s ease infinite;
+}
+
+#description, #description2 {
+    /*margin-top: 100px;*/
+    width: 100%;
+    height: 60vh;
+}
+
+#comm, #comm2 {
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#anchor0, #anchor2, #anchor3, #anchor4, #anchor5, #anchor6 {
+    color: #1A1D25;
+}
+
+#firstViz {
+    width: 100%;
+    height: 100vh;
+}
+ 
+
+.axis path {
+    stroke: #283345 !important;
+}
+
+.y.axis path {
+    stroke: #283345 !important;
+    opacity: 0;
+}
+
+.axis text {
+    stroke: #ffffff !important;
+}
+
+.titles { 
+    font-family: 'Oswald'; 
+}
+
+.tooltip {
+    color: white;
+}
+
+
+div.tooltip {	
+    position: absolute;			
+    text-align: center;			
+    width: 60px;					
+    height: 28px;								
+    font: 12px sans-serif;		
+    background: '#1A1D25';	
+    border: 1px solid white;	
+    border-radius: 8px;			
+    pointer-events: none;			
+}
+
+.tooltipscatter {
+    color: white;
+    background-color: #1A1D25;
+    
+}
+
+div.tooltipscatter {	
+    position: absolute;			
+    text-align: center;			
+    width: 150px;					
+    height: 100px;						
+    font: 50px sans-serif;		
+    background-color: '#1A1D25';	
+    border: 1px solid white;	
+    border-radius: 8px;			
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;		
+}
+.label {
+    fill: white;
+    font-family: 'Oswald';
+    cursor: pointer;
+}
+
+#container1, #container2,#container3, #container4, #minicontainer, #container5 {
+    width: 100%;
+    height: 10vw;
+    
+}
+
+#firstViz, #secondViz,#thirdViz, #fourthViz, #fifthViz, #lastViz {
+    float: left;
+    text-align: left;
+    height: 10vw;
+    overflow: hidden;
+    overflow-x: hidden;
+
+    
+    
+}
+
+#firstDescr, #secondDescr, #thirdDescr, #fourthDescr, #fifthDescr {
+    float: left;
+    text-align: left;
+    height: 10vw;
+    overflow: scroll;
+    overflow-x: hidden
+}
+
+.commentary {
+    float: center;
+    
+    padding: 20px;
+    margin: 0px;
+}
+
+p {
+    font-family: "Times New Roman", Times, serif;
+}
+
+#fourthViz.text {
+    font-size: 10px;
+}
+
+
+.rank1 {
+    text-align: center;
+    border: 1px solid white;
+    padding: 5px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 10;
+}
+.rank2 {
+    text-align: center;
+    border: 1px solid white;
+    padding: 5px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 20;
+}
+
+.rank3 {
+    text-align: center;
+    border: 1px solid white;
+    padding: 5px;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 15;
+}
+.rank4 {
+    text-align: center;
+    border: 1px solid white;
+    padding: 5px;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 20;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+  }
+
+  .dot {
+      cursor: pointer;
+  }
+
+/*#castle {
+    border: white 1px solid;
+}*/
