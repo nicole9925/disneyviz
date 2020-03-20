@@ -318,7 +318,7 @@ function plotArc() {
         .style("fill", "white") 
         .style("font-size", "5px") 
         //.style("text-decoration", "underline") 
-        .text("Click arc lines for tooltip, or words to display only the relationships including that word.");
+        .text("Click arc lines for tooltip, or words to display only the relationships including that word. The width of links determines the number of relationships.");
 
         svg.append("circle")
         .attr("cx", (width / 2)-80)             
