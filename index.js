@@ -562,15 +562,6 @@ function plotsecondBar() {
 
 }
 
-$(window).bind('scroll', function() {
-    if ($(window).scrollTop() > 10000) {
-        $('#firstViz').hide();
-    }
-    else {
-        $('firstViz').show();
-    }
-});
-
 
 
 window.addEventListener('DOMContentLoaded', scroll)
