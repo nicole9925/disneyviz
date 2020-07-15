@@ -1,174 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Disney</title>
-    <link href="style.css" rel="stylesheet" />
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/waltograph" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
-    <script src="disney.js"></script>
-    <script src="https://d3js.org/d3.v4.js"></script>
-    <script type="text/javascript" src="index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>I'm Nicole Lee</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 </head>
-
-
-<body> 
-    <a id="anchor0">anchor</a>
-        <section id=opening>
-            <div id="title">
-                <h1>Disney Viz</h1>
-            </div>
-            <svg id="castle" preserveAspectRatio="xMinYMin" viewBox="0 0 500 100">
-                <circle id = 'star1' cx='100' cy='1' r='.5' fill='white'></circle>
-                <circle id = 'star2' cx='120' cy='50' r='.5' fill='white'></circle>
-                <circle id = 'star5' cx='400' cy='10' r='.5' fill='white'></circle>
-                <circle id = 'star6' cx='380' cy='20' r='.5' fill='white'></circle>
-                <circle id = 'star3' cx='460' cy='43' r='.5' fill='white'></circle>
-                <circle id = 'star4' cx='80' cy='60' r='.5' fill='white'></circle>
-                <!--<text x="228" y="95" fill="white" class="small">by: Nicole Lee</text>-->
-            </svg>
-            <p>&nbsp; &nbsp; &nbsp; by: nicole lee</p>
-            <!--<section id="description">-->
-            <br><br>
-            <a id="anchor1"></a>
-            <!--</section>-->
-        </section> 
-        <section id="description">
-            <div id="comm">
-                <p>When you think of Disney songs, what do you think of? Love? Happiness? Empowerment? Me too. Pretty generic right?
-                    In making this visualization, I wondered if I could find some insight into Disney songs how Disney songs are so original, yet generic 
-                    at the same time, or make inferences about the song lyrics. 
-
-                    <br>
-                    <br>
-                    I used d3 to make the graphs/charts, coördinator for the image above, 
-                    python [requests, pandas, BeautifulSoup, nltk (vader lexicon)] to webscrape/conduct sentiment analysis,
-                    and www.disneyclips.com for lyrics.
-                </p>
-            </div>
-        </section>
-        <div id="container1">
-            <section style="width:29%; height:350%;" id="firstDescr">
-                <div class="commentary">
-                    <h1 style="font-size: 30px"> Common Words - EDA </h1>
-                    <p>I began doing exploratory data analysis. The most initial visualization I began to make was one for the sole purpose of quantifying the lyrics 
-                        and determining the most prevalent words. This visualization contains only words that have been featured
-                        in songs at least 150 times.<br><br> Prior to beginning the analysis process, 
-                        I had thought that the word "love" would be the most common. However, the most common word ended up being "time."
-                        "Time?" I thought. I could think of one song with the word time (Beauty and the Beast's "Tale as old as time" line). 
-                        I then quickly came to the realization that one word wouldn't tell me much that I didn't already know about Disney songs. 
-                        And, knowing Disney, I had the hypothesis that all of the words were connected and played to similar themes.
-                    </p>
-                </div>
-            </section>
-            <section style="width:69%; height:auto;" id="firstViz">
-                <a id="anchor2">anchor</a>
-            </section>
+<body>
+    <header class="beginning" id="home">
+        <div class="logo" data-aos="fade-right">
+            <h1 class="name"><b>NICOLE LEE</b></h1>
+            <p class="description">NICOLEMANDYLEE8@GMAIL.COM<br>SAN DIEGO, CA | LOS ANGELES, CA</p>
         </div>
-        <div id="container2">
-            <section style="width:69%; height:auto;" id="secondViz">
-                <a id="anchor3">anchor</a>
-            </section>
-            <section style="width:29%; height:350%;" id="secondDescr">
-                <div class="commentary">
-                    <h1 style="font-size: 30px"> Word Relations - EDA </h1>
-                    <p>To conclude the exploratory analysis phase, I set out to visualize the relationships between the most common words, through the number of songs they are in together. 
-                        The colors represent the tone of the word -- blue as positive, pink as neutral. Notice that no negative words made it into my common words list -- it wasn't planned!
-                        I figured that most of the words would fall under the same theme, thus would be used together often. 
-                        <br><br>Please feel free to explore by yourself by clicking 
-                        on the words to see the significant relationships a word has with others. The relationships are capped at 30, meaning that 
-                        if a relationship is a part of less than 30 songs, it is not included, for readability.
-                    </p>
-                </div>
-            </section>
+        <div class="btn-group" data-aos="fade-left">
+            <a href="https://www.facebook.com/nicole.mandy.lee/" class="btn btn-primary" >
+                <img class="social-image" alt="facebook" src="img/fb.png">
+            </a>
+            <a href="https://www.instagram.com/nicole.lee/" class="btn btn-primary" >
+                <img class="social-image" alt="instagram" src="img/ig.png">
+            </a>
+            <a href="https://www.linkedin.com/in/nicole-lee-1ab684187/" class="btn btn-primary" >
+                <img class="social-image" alt="linkedin" src="img/linkedin.png">
+            </a>
+            <a href="https://mail.google.com/mail/u/0/" class="btn btn-primary" >
+                <img class="social-image" alt="mail" src="img/telegram.png">
+            </a>
         </div>
-
-        <div id="container3">
-            <section style="width:69%; height:auto;" id="thirdViz">
-                <a id="anchor4">anchor</a>
-            </section>
-            <section style="width:29%; height:380%;" id="thirdDescr">
-                <div class="commentary">
-                    <h1 style="font-size: 30px"> Overview of Song Sentiments</h1>
-                    <p>To enter my actual analysis phase, the first thing I did was perform sentiment analysis on the lyrics of all of the songs in my dataset.
-                        It is important to mention that though I only graphed the percentage of positive and negative words, there were also neutral words, so the sentiment
-                        score in the tooltips are not completely reliant on the results of the two variables. As expected, there are more positive songs than negative songs! 
-                        The outliers are also interesting to explore. For example, 'I'm Wishing' from Snow White has a whopping sentiment score of
-                        0.9988, on a scale of -1 to 1 (negative to positive)! 
-
-                        <br>
-                        <br>
-
-                        Below, we reimagine the above graph by now grouping the songs into their respective movies to see overall sentiment, based on a movie's average song sentiment score.
-                        Due to the large quantity of songs, I decided to rank them by the most positive and most negative. Can we determine the general mood of a movie based on music sentiment
-                        scores alone?
-                    </p>
+    </header>
+    <section class="greeting" data-aos="fade-up" data-aos-duration="2000">
+        <div class="greeting__img"></div>
+        <header class="greeting__header">
+            <h3 class="section-title">HELLO THERE! I’M <span class="highlight">NICOLE</span>.</h3>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="navigation active" href="#home">HOME</a>
+                        <a class="navigation scroll" href="#about">ABOUT</a>
+                        <a class="navigation scroll" href="#projects">PROJECTS</a>
+                        <a class="navigation scroll" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <section class="about-me" id="about">
+        <header class="about-me__title" data-aos="fade-right">
+            <h2>About</h2>
+            <nav class="page-nav">
+                <ul>
+                    <li>
+                        <a class="navigation scroll" href="#home">HOME   </a>
+                        <a class="navigation active" href="#about">ABOUT   </a>
+                        <a class="navigation scroll" href="#projects">PROJECTS   </a>
+                        <a class="navigation scroll" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="about-me__body" data-aos="fade-left">
+            <div class="about-me__border">
+                <p><b>What I’ve done so far and how its contributed to my career journey:</b><br>
+                    Please check out my <a class="highlight" href=''>resume</a> for more concrete examples of what I have done.</p>
+                <div class= "experiences">
+                    <div class="experience" data-aos="flip-right">
+                        <img class="experience-img" alt="ucsd" src="img/ucsd.svg">
+                        <div class = "experience-text">
+                            <h5>UC San Diego</h5>
+                            <p>La Jolla, CA  / 2017 - Curr </p>
+                            <p>Currently, I’m in my fourth year at UC San Diego, studying data science with a minor in political science! I’ve been active in a plethora of organizations, acting as chair of Active Community at Thurgood Marshall (a service organization) and media chair of Nikkei Student Union. I was also especially active in Kappa Alpha Pi, a pre-law fraternity and Side by Side (also a service organization). I even participated in a dance team (Division 12)!</p>
+                        </div>
+                    </div>
+                    <div class="experience" data-aos="flip-right">
+                        
+                        <img class="experience-img" alt="caida" src="img/caida.svg">
+                        <div class = "experience-text">
+                            <h5>Center of Applied Internet Analysis</h5>
+                            <p>La Jolla, CA  / 2020 - Curr / Web Application Development Intern REU</p>
+                            <p>Following the completion of my first data visualization class, I realized that I enjoyed studying and practicing the intersection of computer science and data science - analyzing data, then creating a visual experience to communicate it. Thus, I decided that the best way to do that would be to begin creating web applications. This job, my first official developer position, opened my eyes to the process of developing actual application deliverables to be used for the public, from the basics of working coorperatively remotely to extensive detail-oriented research to efficient programming.</p>
+                        </div>
+                    </div>
+                    <div class="experience" data-aos="flip-right">
+                        <img class="experience-img" alt="hdsi" src="img/hdsi.svg">
+                        <div class = "experience-text">
+                            <h5>Halıcıoğlu Data Science Institute</h5>
+                            <p>La Jolla, CA  / 2019 / Data Science Instructional Assistant</p>
+                            <p>I was an instructional assistant for UC San Diego’s “Principle of Data Science,” or DSC10. This was an introductory course to data science. This was by far one of the most rewarding jobs I have  had, as I was not only able to rekindle my initial interest and love of data science, but I was also able to contribute to UC San Diego’s data science community. Prior to this experience, I would tense up at the prospect of explaining statistics or programming concepts - I was able to overcome doing so and practice effectively communicating concepts during this job.</p>
+                        </div>
+                    </div>
+                    <div class="experience" data-aos="flip-right">
+                        <img class="experience-img" alt="qualcomm institute" src="img/qualcomm.svg">
+                        <div class = "experience-text">
+                            <h5>Qualcomm Institute</h5>
+                            <p>La Jolla, CA  / 2018-2019 / Research Intern</p>
+                            <p>Through UC San Diego’s Academic Internship Program (or AIP), in which students can participate in an internship whilst receiving school credit, I was able to intern at the Qualcomm Institute. I was blown away by the innovative research in computer science and technology happening in front of my eyes. I developed a VR experience that helped induce sleep, based on research about the topic. As this was my first non-analytics project, I first felt the exhilaration of building a working product from ground up.</p>
+                        </div>
+                    </div>    
+                    <div class="experience" data-aos="flip-right">
+                        <img class="experience-img" alt="san diego gas and electric" src="img/sdge.svg">
+                        <div class = "experience-text">
+                            <h5>San Diego Gas and Electric</h5>
+                            <p>San Diego, CA  / 2018 - 2019 / Business Analyst Intern</p>
+                            <p>By this time, I had finished my first year studying data science. I spent majority of my time fulfilling data requests and researching/compiling information about consumers, and very quickly began to brainstorm methods to speed up these processes. I developed two projects: one that created a database of businesses in the area and programmatically assigned them to NAICS codes, a manual task that we normally spent hours a week working on, and another that automated their third-party requests validation process. </p>
+                        </div>
+                    </div>    
+                    <div class="experience" data-aos="flip-right">
+                        <img class="experience-img" alt="arcina risk group" src="img/arcina.svg">
+                        <div class = "experience-text">
+                            <h5>Arcina Risk Group</h5>
+                            <p>Los Angeles, CA  / 2018 / Summer Intern</p>
+                            <p>As a college freshman student studying political science, I had my mind set on becomming a lawyer. By the end of the year, after speaking to lawyers and learning more about the field, I decided that that was not the right path. Working at Arcina Risk Group was a formative experience for me, in terms of career, as it was my first time working in a corporate environment. I was not only able to speak to former lawyers, but I also learned the importance and potential of gaining technical skills in business.</p>    
+                        </div>
+                    </div>
+                    <div class="experience" data-aos="flip-right">
+                        <img class="experience-img" alt="san marino high school" src="img/smhs.svg">
+                        <div class = "experience-text">
+                            <h5>San Marino High School</h5>
+                            <p>San Marino, CA  / 2013-2017</p>
+                            <p>I’ve always been thankful for my experiences in the San Marino school district. Teamwork, perserverance, confidence, and leadership are values that I have had more formal exposure to in my college years, but I still credit majority of what I’ve learned through my high school drumline, badminton, and other organization teams. Once a band geek...always a band geek?</p>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+    </section>
+    <section class="projects-section" id = "projects">
+        <header class = "projects-section__title" data-aos="fade-right">
+            <h2>Projects</h2>
+            <nav class="page-nav">
+                <ul>
+                    <li>
+                        <a class="navigation scroll" href="#home">HOME   </a>
+                        <a class="navigation scroll" href="#about">ABOUT   </a>
+                        <a class="navigation active" href="#projects">PROJECTS   </a>
+                        <a class="navigation scroll" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="projects-section__body">
+            <div class="projects">
+                <p><b>Current/Past Projects:</b><br>I was working on a visualization about myself when it dawned on me that the array of projects I have been working on/have finished are good representations of my interests!</p>
+                <div class="project" data-aos="flip-right">
+                    <img class="projects-img" alt="hong kong flag" src="img/hk.svg">
+                    <div class="projects-text">
+                        <h5>Hong Kong Computational Twitter Bots</h5>
+                        <p>(Python / WIP)</p>
+                        <p>Misinformation in this technological era has always been an area of interest for me. As a Chinese-American whose parents grew up in Hong Kong, the Hong Kong democracy movement was always a major point of discussion at the dinner table. Upon seeing news of Twitter banning hundreds of thousands of Chinese computational twitter bots directed at the Hong Kong protests, I immediately submitted a proposal to research this topic for HDSI’s Undergraduate Research Scholarship.</p>
+                    </div>
                 </div>
-            </section>
+                <div class="project" data-aos="flip-right">
+                    <img class="projects-img" alt="network" src="img/ipv4.svg">
+                    <div class="projects-text">
+                        <h5>CAIDA IPv4 Allocation Visualization</h5>
+                        <p>(WIP)</p>
+                        <p>This webpage was created to educate the general public about internet address allocation, address exahaustion, and IPv4. It is presented in the form of an animated sankey diagram with changing slides. </p>
+                    </div>
+                </div>
+                <div class="project" data-aos="flip-right">
+                    <img class="projects-img" alt="disney" src="img/disney.png">
+                    <div class="projects-text">
+                        <h5><a class="demo" href="disney/index.html">Disney Song Lyrics Visualization</a></h5>
+                        <p> (Python Vader / d3.js)</p>
+                        <p>Using the vader package in Python, I conducted sentiment analysis on nearly every Disney song, and created a visualization dashboard using what I learned from the analysis.</p>
+                    </div>
+             </div>
+                <div class="project" data-aos="flip-right">
+                    <img class="projects-img" alt="cards" src="img/cards.png">
+                    <div class="projects-text">
+                        <h5>Generative Card Game Using RNN </h5>
+                        <p>(React.js / Python Keras)</p>
+                        <p>I compiled text rules from hundreds of existing card game rules sheets (found on the internet) and generated my own new set of rules using a RNN LSTM model trained on my data. After the creation of the rules, I created a working version of the card game using React.js.</p>
+                    </div>
+                </div>  
+            </div>
         </div>
-            <div id="container4">
-                <section style="width:49%; height:auto;" id="fourthViz">
-                    <a id="anchor5">anchor</a>
-                </section>
-                <section style="width:49%; height:auto;" id="fifthViz">
-                    <a id="anchor6">anchor</a>
-                </section>
+    </section>
+    <section class="contact-me" id="contact">
+        <header class="contact-me__title" data-aos="fade-right">
+            <h2>Contact</h2>
+            <nav class="page-nav">
+                <ul>
+                    <li>
+                        <a class="navigation scroll" href="#home">HOME   </a>
+                        <a class="navigation scroll" href="#about">ABOUT   </a>
+                        <a class="navigation scroll" href="#projects">PROJECTS   </a>
+                        <a class="navigation active" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="contact-me__body" data-aos="fade-left">
+            <div class="message">
+                <p>Let’s talk data, viz, and music! <br><br> Open for freelance projects, data science/software enginnering interships or full-time employment.<br><b>Nicole Lee</b></p>
             </div>
-
-
-
-            <div id="container5">
-                    <section style="width:40%; height:380%;" id="fourthDescr">
-                            <div class="commentary">
-                                <br>
-                                <br>
-                                <h1 style="font-size: 30px"> Finale </h1>
-                                <p> As you can see, the positive movies consisted
-                                    almost exclusively of romance movies, while the negative movies consisted of more adventure type movies. We can now
-
-                                    compile the information that we've gathered, we can make a few inferences: 
-                                    the most positive and negative song and movie!                     </p>
-            
-                                <br>
-                                <br>
-                            </div>
-
-                    </section>
-                    <section style="width:59%; height:auto;" id="lastViz">
-                        <a id="anchor7">anchor</a>
-                    </section>
+            <div class="btn-group" data-aos="flip-up">
+                <a href="https://www.facebook.com/nicole.mandy.lee/" class="btn btn-primary"  >
+                    <img class="social-image" alt="facebook" src="img/fb.png">
+                </a>
+                <a href="https://www.instagram.com/nicole.lee/" class="btn btn-primary" >
+                    <img class="social-image" alt="instagram" src="img/ig.png">
+                </a>
+                <a href="https://www.linkedin.com/in/nicole-lee-1ab684187/" class="btn btn-primary" >
+                    <img class="social-image" alt="linkedin" src="img/linkedin.png">
+                </a>
+                <a href="#" class="btn btn-primary" >
+                    <img class="social-image" alt="mail" src="img/telegram.png">
+                </a>
             </div>
-
-
-            <!--<section style="width:69%; height:auto;" id="rankDescr">
-                    <div class='rank1' style="width:34%">
-                        <h4>Most Positive Movie:</h4>
-                        <h3>SOFIA THE FIRST: THE FLOATING PALACE</h3>
-                    </div>
-                    <br>
-                    <div class='rank2' style="width:34%">
-                        <h4>Most Negative Movie:</h4>
-                        <h3>ELENA OF AVALOR: REALM OF THE JAQUINS</h3>
-                    </div>
-                    
-                    <br>
-                    <div class='rank3' style="width:34%">
-                        <h4>Most Positive Song:</h4>
-                        <h3>SAY IT WITH A SLAP</h3>
-                        <h4>from fun and fancy free</h4>
-                    </div>
-                    
-                    <br>
-                    <div class='rank4' style="width:34%">
-                        <h4>Most Negative Song:</h4>
-                        <h3>SAVAGES</h3>
-                        <h4>from pocahontas</h4>
-                    </div>
-                </section>    -->
-
-
+        </div>
+    </section>
+    <script>
+        AOS.init({ duration: 1000 });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
+</html>

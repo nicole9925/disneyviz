@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Disney</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/waltograph" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
+    <script src="disney.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+
+
+<body> 
+    <a id="anchor0">anchor</a>
+        <section id=opening>
+            <div id="title">
+                <h1>Disney Viz</h1>
+            </div>
+            <svg id="castle" preserveAspectRatio="xMinYMin" viewBox="0 0 500 100">
+                <circle id = 'star1' cx='100' cy='1' r='.5' fill='white'></circle>
+                <circle id = 'star2' cx='120' cy='50' r='.5' fill='white'></circle>
+                <circle id = 'star5' cx='400' cy='10' r='.5' fill='white'></circle>
+                <circle id = 'star6' cx='380' cy='20' r='.5' fill='white'></circle>
+                <circle id = 'star3' cx='460' cy='43' r='.5' fill='white'></circle>
+                <circle id = 'star4' cx='80' cy='60' r='.5' fill='white'></circle>
+                <!--<text x="228" y="95" fill="white" class="small">by: Nicole Lee</text>-->
+            </svg>
+            <p>&nbsp; &nbsp; &nbsp; by: nicole lee</p>
+            <!--<section id="description">-->
+            <br><br>
+            <a id="anchor1"></a>
+            <!--</section>-->
+        </section> 
+        <section id="description">
+            <div id="comm">
+                <p>When you think of Disney songs, what do you think of? Love? Happiness? Empowerment? Me too. Pretty generic right?
+                    In making this visualization, I wondered if I could find some insight into Disney songs how Disney songs are so original, yet generic 
+                    at the same time, or make inferences about the song lyrics. 
+
+                    <br>
+                    <br>
+                    I used d3 to make the graphs/charts, coördinator for the image above, 
+                    python [requests, pandas, BeautifulSoup, nltk (vader lexicon)] to webscrape/conduct sentiment analysis,
+                    and www.disneyclips.com for lyrics.
+                </p>
+            </div>
+        </section>
+        <div id="container1">
+            <section style="width:29%; height:350%;" id="firstDescr">
+                <div class="commentary">
+                    <h1 style="font-size: 30px"> Common Words - EDA </h1>
+                    <p>I began doing exploratory data analysis. The most initial visualization I began to make was one for the sole purpose of quantifying the lyrics 
+                        and determining the most prevalent words. This visualization contains only words that have been featured
+                        in songs at least 150 times.<br><br> Prior to beginning the analysis process, 
+                        I had thought that the word "love" would be the most common. However, the most common word ended up being "time."
+                        "Time?" I thought. I could think of one song with the word time (Beauty and the Beast's "Tale as old as time" line). 
+                        I then quickly came to the realization that one word wouldn't tell me much that I didn't already know about Disney songs. 
+                        And, knowing Disney, I had the hypothesis that all of the words were connected and played to similar themes.
+                    </p>
+                </div>
+            </section>
+            <section style="width:69%; height:auto;" id="firstViz">
+                <a id="anchor2">anchor</a>
+            </section>
+        </div>
+        <div id="container2">
+            <section style="width:69%; height:auto;" id="secondViz">
+                <a id="anchor3">anchor</a>
+            </section>
+            <section style="width:29%; height:350%;" id="secondDescr">
+                <div class="commentary">
+                    <h1 style="font-size: 30px"> Word Relations - EDA </h1>
+                    <p>To conclude the exploratory analysis phase, I set out to visualize the relationships between the most common words, through the number of songs they are in together. 
+                        The colors represent the tone of the word -- blue as positive, pink as neutral. Notice that no negative words made it into my common words list -- it wasn't planned!
+                        I figured that most of the words would fall under the same theme, thus would be used together often. 
+                        <br><br>Please feel free to explore by yourself by clicking 
+                        on the words to see the significant relationships a word has with others. The relationships are capped at 30, meaning that 
+                        if a relationship is a part of less than 30 songs, it is not included, for readability.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <div id="container3">
+            <section style="width:69%; height:auto;" id="thirdViz">
+                <a id="anchor4">anchor</a>
+            </section>
+            <section style="width:29%; height:380%;" id="thirdDescr">
+                <div class="commentary">
+                    <h1 style="font-size: 30px"> Overview of Song Sentiments</h1>
+                    <p>To enter my actual analysis phase, the first thing I did was perform sentiment analysis on the lyrics of all of the songs in my dataset.
+                        It is important to mention that though I only graphed the percentage of positive and negative words, there were also neutral words, so the sentiment
+                        score in the tooltips are not completely reliant on the results of the two variables. As expected, there are more positive songs than negative songs! 
+                        The outliers are also interesting to explore. For example, 'I'm Wishing' from Snow White has a whopping sentiment score of
+                        0.9988, on a scale of -1 to 1 (negative to positive)! 
+
+                        <br>
+                        <br>
+
+                        Below, we reimagine the above graph by now grouping the songs into their respective movies to see overall sentiment, based on a movie's average song sentiment score.
+                        Due to the large quantity of songs, I decided to rank them by the most positive and most negative. Can we determine the general mood of a movie based on music sentiment
+                        scores alone?
+                    </p>
+                </div>
+            </section>
+        </div>
+            <div id="container4">
+                <section style="width:49%; height:auto;" id="fourthViz">
+                    <a id="anchor5">anchor</a>
+                </section>
+                <section style="width:49%; height:auto;" id="fifthViz">
+                    <a id="anchor6">anchor</a>
+                </section>
+            </div>
+
+
+
+            <div id="container5">
+                    <section style="width:40%; height:380%;" id="fourthDescr">
+                            <div class="commentary">
+                                <br>
+                                <br>
+                                <h1 style="font-size: 30px"> Finale </h1>
+                                <p> As you can see, the positive movies consisted
+                                    almost exclusively of romance movies, while the negative movies consisted of more adventure type movies. We can now
+
+                                    compile the information that we've gathered, we can make a few inferences: 
+                                    the most positive and negative song and movie!                     </p>
+            
+                                <br>
+                                <br>
+                            </div>
+
+                    </section>
+                    <section style="width:59%; height:auto;" id="lastViz">
+                        <a id="anchor7">anchor</a>
+                    </section>
+            </div>
+
+
+            <!--<section style="width:69%; height:auto;" id="rankDescr">
+                    <div class='rank1' style="width:34%">
+                        <h4>Most Positive Movie:</h4>
+                        <h3>SOFIA THE FIRST: THE FLOATING PALACE</h3>
+                    </div>
+                    <br>
+                    <div class='rank2' style="width:34%">
+                        <h4>Most Negative Movie:</h4>
+                        <h3>ELENA OF AVALOR: REALM OF THE JAQUINS</h3>
+                    </div>
+                    
+                    <br>
+                    <div class='rank3' style="width:34%">
+                        <h4>Most Positive Song:</h4>
+                        <h3>SAY IT WITH A SLAP</h3>
+                        <h4>from fun and fancy free</h4>
+                    </div>
+                    
+                    <br>
+                    <div class='rank4' style="width:34%">
+                        <h4>Most Negative Song:</h4>
+                        <h3>SAVAGES</h3>
+                        <h4>from pocahontas</h4>
+                    </div>
+                </section>    -->
+
+
+</body>
